@@ -1,0 +1,8 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+<image class="headImage" src="/imgs/1.jpg" mode="aspectFill"></image>
+<text class="welcomeText">{{welcome}}</text>
+<view class="button">
+  <text class="buttonText">open mini program </text>
+</view>
+</view>
