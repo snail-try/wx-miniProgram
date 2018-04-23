@@ -1,0 +1,76 @@
+/* pages/moveList/moveList.wxss */
+
+.swiper {
+  width: 750rpx;
+  height: 180px;
+}
+
+.swiper .swiper-item {
+  /* position:relative; */
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .swiper-image {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .swiper-desc {
+  color: #000;
+  z-index: 10;
+  position: absolute;
+  bottom: 20px;
+}
+
+.movie-list-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-bottom: solid 1rpx #ededed;
+  border-top: solid 1rpx #ededed;
+}
+
+.movie-list-item .movie-list-title {
+  padding-left: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.movie-list-item .movie-list-title .movie-list-title-img {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+  vertical-align: middle;
+}
+
+.movie-list-item .movie-list-title .movie-list-title-text {
+  vertical-align: middle;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.movie-list-item .movie-list-img {
+  width: 750rpx;
+}
+
+.movie-list-item .moive-list-info {
+  padding-left: 30rpx;
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
+  color: #888;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.movie-list-item .movie-list-small-icon {
+  margin-right: 5px;
+}
+
+.movie-list-item .movie-list-desc {
+  margin-right: 20px;
+}

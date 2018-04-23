@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/moveList/moveList",
     "pages/welcome/welcome"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
