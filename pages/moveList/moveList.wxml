@@ -19,6 +19,6 @@
   </swiper>
 
   <block wx:for="{{newsDataList}}" wx:key="id">
-    <template is="newsTemplate" data="{{item}}"></template>
+    <template is="newsTemplate" data="{{...item}}"></template>
   </block>
 </view>
