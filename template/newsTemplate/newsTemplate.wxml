@@ -1,0 +1,15 @@
+<template name="newsTemplate">
+    <view class="movie-list-item">
+      <view class='movie-list-title'>
+        <image class="movie-list-title-img" src='{{item.authorImg}}'></image>
+        <text>{{item.title}}</text>
+      </view>
+      <image class="movie-list-img" src="{{item.showImg}}" mode="aspectFill"></image>
+      <view class="moive-list-info">
+        <text class="fa fa-calendar movie-list-small-icon"></text>
+        <text class="movie-list-desc">{{item.date}}</text>
+        <text class="fa fa-commenting movie-list-small-icon"></text>
+        <text class="movie-list-desc">{{item.pv}}</text>
+      </view>
+    </view>
+</template>

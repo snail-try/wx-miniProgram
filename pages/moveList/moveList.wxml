@@ -1,11 +1,10 @@
 <!--pages/moveList/moveList.wxml-->
+<import src="../../template/newsTemplate/newsTemplate.wxml" />
 <view>
   <swiper class="swiper" indicator-active-color="{{indicatorActiveColor}}" indicator-color="{{indicatorColor}}" bindchange="swiperChange" indicator-dots="true" autoplay="true" interval="3000">
     <swiper-item>
       <view class="swiper-item">
-        <text class="swiper-desc">33333</text>
         <image class="swiper-image" src="/imgs/1.jpg" mode="aspectFill" />
-
       </view>
     </swiper-item>
     <swiper-item>
@@ -19,46 +18,7 @@
     </swiper-item>
   </swiper>
 
-  <view class="movie-list-item">
-    <view class='movie-list-title'>
-      <image class="movie-list-title-img" src='/imgs/1.jpg'></image>
-      <text>一个人的旅程</text>
-    </view>
-    <image class="movie-list-img" src="/imgs/2.jpg" mode="aspectFill"></image>
-    <view class="moive-list-info">
-      <text class="fa fa-calendar movie-list-small-icon"></text>
-      <text class="movie-list-desc">2018-04-21</text>
-      <text class="fa fa-commenting movie-list-small-icon"></text>
-      <text class="movie-list-desc">30</text>
-    </view>
-  </view>
-
-  <view class="movie-list-item">
-    <view class='movie-list-title'>
-      <image class="movie-list-title-img" src='/imgs/2.jpg'></image>
-      <text>秋天的云</text>
-    </view>
-    <image class="movie-list-img" src="/imgs/3.jpg" mode="aspectFill"></image>
-    <view class="moive-list-info">
-      <text class="fa fa-calendar movie-list-small-icon"></text>
-      <text class="movie-list-desc">2018-04-21</text>
-      <text class="fa fa-commenting movie-list-small-icon"></text>
-      <text class="movie-list-desc">30</text>
-    </view>
-  </view>
-
-
-  <view class="movie-list-item">
-    <view class='movie-list-title'>
-      <image class="movie-list-title-img" src='/imgs/3.jpg'></image>
-      <text>山水之间，天地之中</text>
-    </view>
-    <image class="movie-list-img" src="/imgs/4.jpg" mode="aspectFill"></image>
-    <view class="moive-list-info">
-      <text class="fa fa-calendar movie-list-small-icon"></text>
-      <text class="movie-list-desc">2018-04-21</text>
-      <text class="fa fa-commenting movie-list-small-icon"></text>
-      <text class="movie-list-desc">30</text>
-    </view>
-  </view>
+  <block wx:for="{{newsDataList}}" wx:key="id">
+    <template is="newsTemplate" data="{{item}}"></template>
+  </block>
 </view>

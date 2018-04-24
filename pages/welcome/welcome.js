@@ -62,5 +62,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  onComeInPage:function(){
+    wx.redirectTo({
+      url: '../moveList/moveList',
+    })
   }
 })

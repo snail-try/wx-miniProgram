@@ -1,19 +1,20 @@
 // pages/moveList/moveList.js
+let {newsData} = require("../../data/movie-data.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    indicatorActiveColor:"#fff",
-    indicatorColor:"#fff"
+    newsDataList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("page load")
+    console.log("page onload")
+    this.setData({ newsDataList: newsData});
   },
 
   /**
