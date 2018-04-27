@@ -1,0 +1,6 @@
+<!--pages/movieList/movieList.wxml-->
+<import src="../movieTemplate/movieColumnTemplate/movieColumnTemplate.wxml" />
+
+<view class="pageContainer">
+  <template is="movieColumnTemplate"></template>
+</view>

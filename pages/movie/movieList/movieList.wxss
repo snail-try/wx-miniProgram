@@ -1,0 +1,6 @@
+/* pages/movieList/movieList.wxss */
+@import "../movieTemplate/movieColumnTemplate/movieColumnTemplate.wxss";
+
+.pageContainer{
+  padding:20rpx;
+}

@@ -1,5 +1,4 @@
-
-// pages/newsDetail/newsDetail.js
+// pages/movieList/movieList.js
 Page({
 
   /**

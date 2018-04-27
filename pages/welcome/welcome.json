@@ -1,3 +1,5 @@
 {
-  "welcome":"Hello,Snail"
+  "navigationBarBackgroundColor":"#b3d4db",
+  "navigationBarTitleText": "Snail资讯",
+  "navigationBarTextStyle":"black"
 }

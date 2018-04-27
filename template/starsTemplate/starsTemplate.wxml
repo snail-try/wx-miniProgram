@@ -1,0 +1,13 @@
+<template name="starsTemplate">
+  <view class="stars-template-container">
+  <view class="stars">
+  <block wx:for="{{stars}}" wx:for-item="item" >
+     <text wx:if="{{item==1}}" style="{{color?'color:{{color}}':''}}" class="star-default fa fa-star"></text>
+     <text wx:elif="{{item==0.5}}" style="{{color?'color:{{color}}':''}}" class="star-default fa fa-star-half-full"></text>
+     <text wx:else style="{{color?'color:{{color}}':''}}" class="star-default fa fa-star-o"></text>
+  </block>
+  </view>
+  <text class="star-value">{{value}}</text>
+  </view>
+  
+</template>

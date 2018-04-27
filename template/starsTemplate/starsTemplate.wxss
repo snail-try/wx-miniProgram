@@ -1,0 +1,21 @@
+.stars-template-container{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height:100%;
+}
+
+.stars-template-container .stars{
+  /* vertical-align: middle; */
+margin-top:-4rpx;
+}
+
+.stars-template-container .star-default{
+  font-size:28rpx;
+  color:#FF9900;
+}
+.stars-template-container .star-value{
+  color:#999;
+   /* vertical-align: middle; */
+}

@@ -1,0 +1,12 @@
+<import src="/template/starsTemplate/starsTemplate.wxml" />
+
+<template name="movieCellTemplate">
+  <view class="movie-cell-template-container">
+    <image mode="aspectFill" src="{{thumbImage}}"></image>
+    <text class="title">{{movieTitle}}</text>
+    <text wx:if="{{!starInfo}}" class="none-evaluate">暂无评分</text>
+    <view wx:if="{{!!starInfo}}" class="stars-container">
+    <template is="starsTemplate" data="{{...starInfo}}"></template>
+    </view>
+  </view>
+</template>

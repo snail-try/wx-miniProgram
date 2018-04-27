@@ -1,6 +1,11 @@
 /**app.wxss**/
 text{
-  font-family:"Microsoft Yahei FontAwesome"
+  font-family:"Microsoft Yahei FontAwesome";
+  font-size:14px;
+}
+
+.pageContainer{
+  /* width:100%; */
 }
 
 @font-face {

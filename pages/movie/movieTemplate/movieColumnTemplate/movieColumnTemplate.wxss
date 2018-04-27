@@ -1,0 +1,27 @@
+@import "../movieCellTemplate/movieCellTemplate.wxss";
+
+.movie-column-template-container{
+ display: flex;
+ flex-direction:column;
+}
+
+.movie-column-template-container .header{
+  margin:10px 0px;
+}
+
+.movie-column-template-container .header .title{
+  color:#333;
+}
+
+.movie-column-template-container .header .more{
+  color:#405f80;
+}
+
+
+
+.movie-column-template-container .movies{
+ display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
