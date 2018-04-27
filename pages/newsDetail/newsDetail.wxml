@@ -1,0 +1,6 @@
+<!--pages/newsDetail/newsDetail.wxml-->
+<view>
+  <image></image>
+  <view></view>
+  <view></view>
+</view>
