@@ -1,6 +1,17 @@
 /* pages/movieList/movieList.wxss */
 @import "../movieTemplate/movieColumnTemplate/movieColumnTemplate.wxss";
 
+page{
+  background-color:#F2F2F2;
+}
+
 .pageContainer{
-  padding:20rpx;
+  
+}
+
+.movie-column-frame{
+  background-color:#fff;
+  padding:0px 20rpx;
+  margin-bottom:20px;
+  padding-bottom:10px;
 }

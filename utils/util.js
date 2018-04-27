@@ -14,6 +14,37 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+function fetch(url, param = {}, method = "GET", header = {'content-type':'application/json'}) {
+  return new Promise((resolve, reject) => {
+    wx.request({
+      url: url,
+      data: param,
+      header:header,
+      success: function (res) {
+        let {data,statusCode,errMsg} = res;
+        if(statusCode==200){
+          resolve(data);
+        }else{
+          reject({code:statusCode,errMsg});
+        }
+        
+      },
+      fail: function (error) {
+        reject(error)
+      }
+    })
+  })
+
+}
+
+function doubanFetch(url, param = {}, method = "GET"){
+  let doubanUrlPrefix = "http://t.yushu.im";
+  let header = {'content-type': 'application/json'}
+  return fetch(doubanUrlPrefix + url, param, method, header);
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  fetch,
+  doubanFetch
 }

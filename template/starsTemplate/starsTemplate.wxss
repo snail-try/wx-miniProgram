@@ -17,5 +17,6 @@ margin-top:-4rpx;
 }
 .stars-template-container .star-value{
   color:#999;
+  font-size:28rpx;
    /* vertical-align: middle; */
 }

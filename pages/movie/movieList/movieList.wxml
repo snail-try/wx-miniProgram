@@ -2,5 +2,10 @@
 <import src="../movieTemplate/movieColumnTemplate/movieColumnTemplate.wxml" />
 
 <view class="pageContainer">
-  <template is="movieColumnTemplate"></template>
+  <view class="movie-column-frame">
+    <template is="movieColumnTemplate"></template>
+  </view>
+  <view class="movie-column-frame">
+    <template is="movieColumnTemplate"></template>
+  </view>
 </view>

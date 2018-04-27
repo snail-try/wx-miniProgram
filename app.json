@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/welcome/welcome",
-    "pages/movie/movieList/movieList"
-    
+  
+    "pages/movie/movieList/movieList",
+      "pages/welcome/welcome"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#405f80",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   }
 }

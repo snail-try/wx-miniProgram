@@ -23,6 +23,7 @@
 
 .movie-cell-template-container .none-evaluate{
   text-align: center;
+  font-size:28rpx;
   color:#999;
 }
 

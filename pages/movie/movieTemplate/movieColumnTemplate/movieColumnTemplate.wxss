@@ -3,10 +3,14 @@
 .movie-column-template-container{
  display: flex;
  flex-direction:column;
+ background-color:#fff;
 }
 
 .movie-column-template-container .header{
   margin:10px 0px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
 }
 
 .movie-column-template-container .header .title{
