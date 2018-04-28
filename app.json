@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/movie/movieGrid/movieGrid",
+
     "pages/welcome/welcome",
-    "pages/movie/movieList/movieList"
+    "pages/movie/movieList/movieList",
+    "pages/movie/movieGrid/movieGrid"
   ],
   "window": {
     "backgroundTextStyle": "light",

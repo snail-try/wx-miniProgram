@@ -14,15 +14,16 @@ Page({
     loadUrl: "",
     pageSize: 20,
     currentSize: 0,
+    pageTitle:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.cloumn)
-    let { cloumn } = options, url = "";
-    switch (cloumn) {
+    let { column } = options, url = "";
+    this.configData.pageTitle = column;
+    switch (column) {
       case "排行榜": url = '/v2/movie/top250'; break;
       case "影院热映": url = '/v2/movie/in_theaters'; break;
       case "即将上映": url = '/v2/movie/coming_soon'; break;
@@ -36,6 +37,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    console.log(this.configData.pageTitle)
+    wx.setNavigationBarTitle({
+      title: this.configData.pageTitle
+    })
     this.loadMoviesInfo();
   },
 

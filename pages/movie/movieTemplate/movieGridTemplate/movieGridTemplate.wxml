@@ -1,7 +1,10 @@
 <import src="../movieCellTemplate/movieCellTemplate.wxml" />
 <template name="movieGridTemplate">
   <view class="movie-grid-template-container">
-  
-    <template name="movieCellTemplate"></template>
+    <block wx:for="{{movies}}">
+      <view class="movie-cell-outer">
+        <template is="movieCellTemplate" data="{{...item}}"></template>
+      </view>
+    </block>
   </view>
 </template>

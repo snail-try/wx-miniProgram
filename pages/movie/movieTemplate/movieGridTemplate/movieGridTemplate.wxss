@@ -1,1 +1,13 @@
 @import "../movieCellTemplate/movieCellTemplate.wxss";
+
+.movie-grid-template-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: flex-start;
+  padding:0px 10rpx;
+}
+
+.movie-grid-template-container .movie-cell-outer{
+  margin:10px 8rpx;
+}

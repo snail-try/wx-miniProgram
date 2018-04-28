@@ -1,4 +1,4 @@
 <import src="../movieTemplate/movieGridTemplate/movieGridTemplate.wxml" />
 <view class="pageContainer">
-  <template is="movieGridTemplate" data="{{...movies}}"></template>
+  <template is="movieGridTemplate" data="{{movies}}"></template>
 </view>
