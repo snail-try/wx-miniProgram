@@ -1,14 +1,18 @@
+<!-- catchtap_more 更多点击事件 -->
 <import src="../movieCellTemplate/movieCellTemplate.wxml" />
 <template name="movieColumnTemplate">
   <view class="movie-column-template-container">
     <view class="header">
-      <text class="title">影院热映</text>
-      <text class="more">更多></text>
+      <text class="title">{{column}}</text>
+      <text class="more" data-column="{{column}}" catchtap="catchtap_more">更多></text>
     </view>
     <view class="movies">
-      <template is="movieCellTemplate" data="{{movieTitle:'狂暴',starInfo:{stars:[1,1,1,0.5,0],value:'6.7分'},thumbImage:'https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2516079193.jpg'}}"></template>
-      <template is="movieCellTemplate" data="{{movieTitle:'低压槽：欲望之城',thumbImage:'https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2520457270.jpg'}}"></template>
-      <template is="movieCellTemplate" data="{{movieTitle:'头号玩家',starInfo:{stars:[1,1,1,1,0.5],value:'8.9分'},thumbImage:'https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2516578307.jpg'}}"></template>
+    <block wx:for="{{movies}}">
+      <template is="movieCellTemplate" data="{{...item}}"></template>
+    </block>
+      
+      <!-- <template is="movieCellTemplate" data="{{movieTitle:'低压槽：欲望之城',thumbImage:'https://img3.doubanio.com/view/photo/m_ratio_poster/public/p2520457270.jpg'}}"></template>
+      <template is="movieCellTemplate" data="{{movieTitle:'头号玩家',starInfo:{stars:[1,1,1,1,0.5],value:'8.9分'},thumbImage:'https://img1.doubanio.com/view/photo/m_ratio_poster/public/p2516578307.jpg'}}"></template> -->
     </view>
   </view>
 

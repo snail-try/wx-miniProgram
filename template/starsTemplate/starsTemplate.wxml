@@ -7,7 +7,7 @@
      <text wx:else style="{{color?'color:{{color}}':''}}" class="star-default fa fa-star-o"></text>
   </block>
   </view>
-  <text class="star-value">{{value}}</text>
+  <text class="star-value">{{value+"分"}}</text>
   </view>
   
 </template>

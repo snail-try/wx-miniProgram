@@ -3,9 +3,12 @@
 
 <view class="pageContainer">
   <view class="movie-column-frame">
-    <template is="movieColumnTemplate"></template>
+    <template is="movieColumnTemplate" data="{{movies:top250,column:'排行榜'}}"></template>
   </view>
   <view class="movie-column-frame">
-    <template is="movieColumnTemplate"></template>
+    <template is="movieColumnTemplate" data="{{movies:theaters,column:'影院热映'}}"></template>
+  </view>
+  <view class="movie-column-frame">
+    <template is="movieColumnTemplate" data="{{movies:comingSoon,column:'即将上映'}}"></template>
   </view>
 </view>

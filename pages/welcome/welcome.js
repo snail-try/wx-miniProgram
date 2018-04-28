@@ -65,7 +65,7 @@ Page({
   },
   onComeInPage:function(){
     wx.redirectTo({
-      url: '../moveList/moveList',
+      url: '../movie/movieList/movieList',
     })
   }
 })
