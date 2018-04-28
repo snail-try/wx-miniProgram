@@ -1,6 +1,7 @@
 <import src="../movieCellTemplate/movieCellTemplate.wxml" />
 <template name="movieGridTemplate">
   <view class="movie-grid-template-container">
+  
     <template name="movieCellTemplate"></template>
   </view>
 </template>
