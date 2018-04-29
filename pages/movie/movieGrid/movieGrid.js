@@ -14,7 +14,8 @@ Page({
     loadUrl: "",
     pageSize: 20,
     currentSize: 0,
-    pageTitle:""
+    total:0,
+    pageTitle: ""
   },
 
   /**
@@ -29,7 +30,7 @@ Page({
       case "即将上映": url = '/v2/movie/coming_soon'; break;
       default: url = '/v2/movie/coming_soon';
     }
-    url = `${url}?start = ${this.configData.currentSize}&count=${this.configData.pageSize}`
+
     this.configData.loadUrl = url;
   },
 
@@ -85,18 +86,44 @@ Page({
   onShareAppMessage: function () {
 
   },
-  loadMoviesInfo() {
+  onReachBottom: function () {
+    let {total,currentSize} = this.configData;
+    if(total<=currentSize){
+      wx.showToast({
+        title: '已到最底部',
+        icon:"none"
+      });
+      return ;
+    }
+    this.loadMoviesInfo(true);
+   
+  },
+  onPullDownRefresh: function () {
+    this.conifgData.currentSize = 0;
+    this.loadMoviesInfo();
+  },
+  loadMoviesInfo(appendData=false) {
     wx.showLoading({
       title: '数据加载中',
     })
-    utils.doubanFetch(this.configData.loadUrl)
+
+    let url = `${this.configData.loadUrl}?start=${this.configData.currentSize}&count=${this.configData.pageSize}`;
+
+    utils.doubanFetch(url)
       .then(data => {
-        let { subjects } = data;
+        let { subjects, total } = data;
+        this.configData.total = total;
         let movies = !!subjects && subjects.length > 0 ? subjects.map(item => {
           let movie = new Movie();
           movie.fromDouban(item);
           return movie;
         }) : [];
+
+//是否追加数据
+        if(appendData){
+          movies.unshift.apply(movies,this.data.movies);
+        }
+        this.configData.currentSize = movies.length;
         this.setData({ movies });
         wx.hideLoading();
       })
