@@ -11,10 +11,12 @@ class Movie {
     this.title = "";
     this.average = null;
     this.year = "不详";
+    this.directors = "";
+    this.summary = "";
   }
 
   fromDouban(obj) {
-    let { casts, comments_count, countries, genres, id, images, title, rating, year } = obj;
+    let { casts, comments_count, countries, genres, id, images, title, rating, year, directors, summary } = obj;
     if (!!casts && casts.length > 0) {
       this.casts = casts.map(item => {
         let { avatars, name } = item;
@@ -30,6 +32,8 @@ class Movie {
     this.title = title;
     this.average = rating && rating.average!=0 ? { stars: this.value2starInfo(rating.average, 5, 10), value: rating.average } : null;
     this.year = year ? year : "不详";
+    this.directors = !!directors ? this.assembleDirectors(directors):"";
+    this.summary = summary;
   }
 
   value2starInfo(value, starNum, maxValue) {
@@ -45,6 +49,12 @@ class Movie {
       }
     }
     return ary;
+  }
+
+  assembleDirectors(ary){
+    if(!Array.isArray(ary) && ary.length>0) return;
+    let result = ary.map(item=>item.name);
+    return result.join("/")
   }
 }
 

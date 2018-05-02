@@ -1,5 +1,6 @@
 /* pages/movieList/movieList.wxss */
 @import "../movieTemplate/movieColumnTemplate/movieColumnTemplate.wxss";
+@import "../movieTemplate/movieGridTemplate/movieGridTemplate.wxss";
 
 page{
   background-color:#F2F2F2;
@@ -14,4 +15,20 @@ page{
   padding:0px 20rpx;
   margin-bottom:20px;
   padding-bottom:10px;
+}
+
+.query-container{
+  background-color:#f2f2f2;
+  display:flex;
+  flex-direction:row;
+  padding:17px 20rpx;
+}
+
+.query-placeholder{
+   font-size:14px;
+}
+
+.query-container icon{
+  margin-right:10px;
+  margin-top:6px;
 }

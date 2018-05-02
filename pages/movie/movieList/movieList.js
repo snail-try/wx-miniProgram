@@ -9,7 +9,9 @@ Page({
   data: {
     top250: [],
     theaters: [],
-    comingSoon: []
+    comingSoon: [],
+    showQueryPage: false,
+    queryData: []
   },
 
   /**
@@ -127,14 +129,49 @@ Page({
       })
       .catch(ex => {
         wx.hideLoading();
-        wx.showToast({ title: "数据加载异常", icon:"none" });
+        wx.showToast({ title: "数据加载异常", icon: "none" });
       })
   },
 
-  catchtap_more(event){
-    console.log(1)
+  catchtap_more(event) {
     wx.navigateTo({
       url: "../movieGrid/movieGrid?column=" + event.currentTarget.dataset.column
     })
+  },
+  tapCellMoive(event) {
+    let { id } = event.currentTarget.dataset;
+    wx.navigateTo({
+      url: '../movieDetail/movieDetail?id=' + id,
+    })
+  },
+  queryMovies(event) {
+
+    let { value } = event.detail;
+    if(!value){
+      this.setData({showQueryPage:false});
+      return;
+    }
+    this.setData({ showQueryPage: true });
+
+    wx.showLoading({
+      title: '加载数据中',
+    })
+    let url = "/v2/movie/search?q=" + value;
+    utils.doubanFetch(url).then(data => {
+      wx.hideLoading();
+      let { subjects } = data;
+      console.log(subjects)
+      let queryData = !!subjects && subjects.length > 0 ? subjects.map(item => {
+        let movie = new Movie();
+        movie.fromDouban(item);
+        return movie;
+      }) : [];
+      console.log(queryData)
+      this.setData({ queryData });
+    })
+      .catch(ex => {
+        wx.hideLoading();
+        console.log(ex);
+      })
   }
 })

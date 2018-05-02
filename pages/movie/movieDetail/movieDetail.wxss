@@ -1,0 +1,139 @@
+/* pages/movie/movieDetail/movieDetail.wxss */
+@import "/template/starsTemplate/starsTemplate.wxss";
+
+.page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-img {
+  width: 100%;
+  height: 320rpx;
+  -webkit-filter: blur(20rpx);
+}
+
+.header-hover {
+  position: absolute;
+  margin-left: 20rpx;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-hover .main-title {
+  color: #fff;
+  font-size: 24px;
+  margin-top: 50rpx;
+  font-weight: bold;
+}
+
+.header-hover .sub-title {
+  color: #fff;
+  font-size: 26rpx;
+  margin-top: 35rpx;
+}
+
+.header-hover .comments-count {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  font-size: 20rpx;
+  margin-top: 35rpx;
+}
+
+.header-hover .comments-count .count {
+  font-size: 28rpx;
+  color: #f40;
+  margin-right: 10rpx;
+}
+
+.header-hover .comments-count .text {
+}
+
+.thumb-img {
+  position: absolute;
+  top: 100rpx;
+  right: 20rpx;
+  height: 300rpx;
+  width: 200rpx;
+}
+
+.detail-content {
+  margin-top: 70rpx;
+  padding: 0px 20rpx;
+}
+
+.detail-content .content-main-title {
+  margin-bottom: 20px;
+  color: #666;
+  font-weight: bold;
+}
+
+.detail-content .form-item {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.detail-content .form-item:last-child {
+  margin-bottom: 0px;
+}
+
+.detail-content .form-item .form-label {
+  color: #999;
+  margin-right: 30px;
+}
+
+.detail-content .form-item .form-value {
+  color: #666;
+  min-width: 200rpx;
+}
+
+.detail-content .border-line {
+  height: 2rpx;
+  background-color: #d9d9d9;
+  margin: 20px 0px;
+}
+
+.detail-content .interduce-title {
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.detail-content .interduce-content {
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.detail-content .interduce-content-all {
+  color: #666;
+}
+
+.casts-scroll {
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.casts-item {
+  display: inline-flex;
+  flex-direction: column;
+  margin-right: 10px;
+  width: 170rpx;
+  white-space: normal;
+}
+
+.casts-item .casts-img {
+  width: 100%;
+  height: 210rpx;
+  margin-bottom: 10px;
+}
+
+.casts-item .casts-name {
+  color: #999;
+  text-align: center;
+}

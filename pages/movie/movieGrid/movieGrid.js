@@ -131,5 +131,11 @@ Page({
         console.log(ex);
         wx.hideLoading();
       })
+  },
+  tapCellMoive(event){
+    let { id } = event.currentTarget.dataset;
+    wx.navigateTo({
+      url: '../movieDetail/movieDetail?id='+id,
+    })
   }
 })

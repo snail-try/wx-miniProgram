@@ -1,7 +1,7 @@
 <import src="/template/starsTemplate/starsTemplate.wxml" />
 
 <template name="movieCellTemplate">
-  <view class="movie-cell-template-container">
+  <view class="movie-cell-template-container" catchtap="tapCellMoive" data-id="{{id}}">
     <image mode="aspectFill" src="{{thumbImg}}"></image>
     <text class="title">{{title}}</text>
     <text wx:if="{{!average}}" class="none-evaluate">暂无评分</text>

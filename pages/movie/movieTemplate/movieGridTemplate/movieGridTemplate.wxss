@@ -9,5 +9,5 @@
 }
 
 .movie-grid-template-container .movie-cell-outer{
-  margin:10px 8rpx;
+  margin:10px 6rpx;
 }

@@ -1,0 +1,54 @@
+<import src="/template/starsTemplate/starsTemplate.wxml" />
+<view class="page-container">
+  <image class="header-img" mode="aspectFill" src="{{movie.thumbImg}}"></image>
+  <view class="header-hover">
+    <text class="main-title">{{movie.title}}</text>
+    <text class="sub-title">{{movie.countries}} ▪ {{movie.year}}</text>
+    <view class="comments-count">
+      <text class="count">{{movie.commentsCount}}</text>
+      <text class="text">条评论</text>
+    </view>
+  </view>
+
+  <image class="thumb-img" mode="aspectFit" src="{{movie.thumbImg}}"></image>
+
+  <view class="detail-content">
+    <view class="content-main-title"><text>{{movie.title}}</text></view>
+
+    <view class="form-item">
+      <text class="form-label">评分</text>
+      <view class="form-value" wx:if="{{!!movie.average}}" >
+        <template is="starsTemplate" data="{{stars:movie.average.stars,value:movie.average.value}}"></template>
+      </view>
+      <text class="form-value" wx:else>暂无评分</text>
+    </view>
+    <view class="form-item">
+      <text class="form-label">导演</text>
+      <text class="form-value">{{movie.directors}}</text>
+    </view>
+    <view class="form-item">
+      <text class="form-label">类型</text>
+      <text class="form-value">{{movie.genres}}</text>
+    </view>
+
+    <view class="border-line"></view>
+
+    <view class="interduce-title"><text>剧情简介</text></view>
+
+    <view class="{{showInterduce==='all'?'interduce-content-all':'interduce-content'}}" catchtap="tapInterduce">
+      <text>{{movie.summary}}</text>
+    </view>
+
+    <view class="border-line"></view>
+
+    <view class="interduce-title"><text>影人</text></view>
+    <scroll-view scroll-x class="casts-scroll">
+    <block wx:for="{{movie.casts}}">
+      <view class="casts-item">
+        <image mode="aspectFill" wx:if="{{item.thumbImg}}" src="{{item.thumbImg}}" class="casts-img"></image>
+        <text class="casts-name">{{item.name}}</text>
+      </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

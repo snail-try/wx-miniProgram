@@ -1,14 +1,23 @@
 <!--pages/movieList/movieList.wxml-->
 <import src="../movieTemplate/movieColumnTemplate/movieColumnTemplate.wxml" />
-
+<import src="../movieTemplate/movieGridTemplate/movieGridTemplate.wxml" />
 <view class="pageContainer">
-  <view class="movie-column-frame">
-    <template is="movieColumnTemplate" data="{{movies:top250,column:'排行榜'}}"></template>
+  <view class="query-container">
+    <icon size="16" type="search"></icon>
+    <input confirm-type='search' placeholder="请输入电影名称" placeholder-class='query-placeholder' bindblur="queryMovies" bindconfirm='queryMovies'></input>
   </view>
-  <view class="movie-column-frame">
-    <template is="movieColumnTemplate" data="{{movies:theaters,column:'影院热映'}}"></template>
-  </view>
-  <view class="movie-column-frame">
-    <template is="movieColumnTemplate" data="{{movies:comingSoon,column:'即将上映'}}"></template>
-  </view>
+  <block wx:if="{{!showQueryPage}}">
+    <view class="movie-column-frame">
+      <template is="movieColumnTemplate" data="{{movies:top250,column:'排行榜'}}"></template>
+    </view>
+    <view class="movie-column-frame">
+      <template is="movieColumnTemplate" data="{{movies:theaters,column:'影院热映'}}"></template>
+    </view>
+    <view class="movie-column-frame">
+      <template is="movieColumnTemplate" data="{{movies:comingSoon,column:'即将上映'}}"></template>
+    </view>
+  </block>
+  <block wx:else>
+     <template is="movieGridTemplate" data="{{movies:queryData}}"></template>
+  </block>
 </view>
