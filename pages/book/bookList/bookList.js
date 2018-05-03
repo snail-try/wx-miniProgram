@@ -1,31 +1,25 @@
-// pages/welcome/welcome.js
+// pages/book/bookList/bookList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    welcome:"Hi,snail",
-    windowHeight:0
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getSystemInfo({
-      success:(data)=>{
-          let { windowHeight } = data;
-          this.setData({windowHeight})
-      }
-    })
+  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+  
   },
 
   /**
@@ -68,10 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  onComeInPage:function(){
-    wx.switchTab({
-      url: '../movie/movieList/movieList'
-    })
   }
 })

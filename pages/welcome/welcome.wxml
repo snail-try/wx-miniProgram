@@ -1,8 +1,8 @@
 <!--pages/welcome/welcome.wxml-->
-<view class="container">
-<image class="headImage" src="/imgs/1.jpg" mode="aspectFill"></image>
-<text class="welcomeText">{{welcome}}</text>
-<view class="button" bindtap="onComeInPage">
-  <text class="buttonText" >开启旅程</text>
-</view>
-</view>
+
+ <view class="container" style="height:{{windowHeight-120}}px;">
+ <image src="../../imgs/1.jpg" mode="aspectFill" class="headImage"></image>
+  <view class="button" bindtap="onComeInPage">
+    <text class="buttonText">开启旅程</text>
+  </view>
+</view> 

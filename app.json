@@ -1,15 +1,40 @@
 {
   "pages": [
-        "pages/welcome/welcome",
+    "pages/welcome/welcome",
     "pages/movie/movieDetail/movieDetail",
     "pages/movie/movieList/movieList",
-    "pages/movie/movieGrid/movieGrid"
-    
+    "pages/movie/movieGrid/movieGrid",
+    "pages/book/bookList/bookList",
+    "pages/music/musicList/musicList"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#405f80",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "##666",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "影视",
+        "iconPath": "imgs/movie.png",
+        "selectedIconPath": "imgs/movie_active.png",
+        "pagePath": "pages/movie/movieList/movieList"
+      },
+      {
+        "text": "阅读",
+        "iconPath": "imgs/book.png",
+        "selectedIconPath": "imgs/book_active.png",
+        "pagePath": "pages/book/bookList/bookList"
+      },
+      {
+        "text": "音乐",
+        "iconPath": "imgs/music.png",
+        "selectedIconPath": "imgs/music_active.png",
+        "pagePath": "pages/music/musicList/musicList"
+      }
+    ]
   }
 }

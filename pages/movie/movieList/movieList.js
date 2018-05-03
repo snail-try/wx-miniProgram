@@ -147,8 +147,8 @@ Page({
   queryMovies(event) {
 
     let { value } = event.detail;
-    if(!value){
-      this.setData({showQueryPage:false});
+    if (!value) {
+      this.setData({ showQueryPage: false });
       return;
     }
     this.setData({ showQueryPage: true });
@@ -166,7 +166,7 @@ Page({
         movie.fromDouban(item);
         return movie;
       }) : [];
-      console.log(queryData)
+
       this.setData({ queryData });
     })
       .catch(ex => {
